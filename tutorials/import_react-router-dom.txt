@@ -1,0 +1,48 @@
+IMPORTAR O REACT-ROUTER-DOM
+
+- Primeiramente, no terminal, digitamos 'npm install react-router-dom --save';
+- Sempre que instalamos um novo pacote ao nosso projeto, primeiramente temos que importá-lo ao arquivo 'index.js';
+
+import { BrowserRouter } from 'react-router-dom';
+
+- Dentro do 'ReactDOM.render{}' temos a renderização do App.js;
+- Incluímos as tag '<BrowserRouter>'.
+
+ReactDOM.render{
+
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>,
+    document.getElementById('root')
+
+};
+
+- No menu em que estarão os links para cada componente, importamos o 'Link' do 'react-router-dom':
+
+import { Link } from 'react-router-dom';
+
+- Para adicionar essa funcionalidade aos componentes, devemos substituir a tag <a> pela tag <Link>:
+
+<Link to="/rota" className="link">Rota</Link>
+
+- No arquivo 'App.js' importamos as funcionalidades 'Switch' e 'Route':
+    - 'Switch' é responsável por alternar a visualização de acordo com as rotas;
+    - 'Route' representa a rota do componente.
+
+import { Switch, Route } from 'react-router-dom';
+
+- Ainda no arquivo 'App.js', abaixo da declaração do componente '<Navbar/>', adicionamos a tag '<Switch>';
+- Dentro da tag <Switch> adicionamos as rotas desta forma:
+
+<Swicth>
+    <Route path="/" exact component={ Resume }/>
+    <Route path="/consults component={ Consults }/>
+    <Route path="/billing" component={ Billing }/>
+</Switch>
+
+- '<Route>' é a tag onde declaramos a rota do componente;
+- 'path' é o caminho para o componente;
+- 'path="/"' é o caminho da página principal da aplicação. Todas as outras rotas devem ser declaradas '/rota/...'/
+- 'exact' faz com que a rota tenha EXATAMENTE o path declarado. Qualquer outra coisa digitada diferente do path
+   não mostrará nenhum componente;
+- 'component={}' declara qual o componente que será exibido pela determinada rota.
