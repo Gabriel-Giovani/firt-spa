@@ -1,0 +1,47 @@
+CRIAR UM COMPONENTE
+
+- criar a pasta 'components' dentro da pasta 'src';
+- dentro da pasta 'components', criar a pasta com o nome do componente, ex: 'Navbar';
+- dentro da pasta do componente, criar o arquivo js com o mesmo nome da pasta, ex: 'Navbar.js';
+  * dentro desta pasta, podemos criar o arquivo.js do componente, arquivos CSS e salvar imagens, fontes etc.
+
+DENTRO DO ARQUIVO NAVBAR.JS
+
+- dentro do arquivo, primeiramente importamos o React e o Component:
+
+import React, { Component } from 'react';
+
+- após, criamos a classe do componente:
+
+class Navbar extends Component{
+
+}
+
+- após isso, adicionamos a função render() e o return(), e ao final, exportamos o componente.
+Esta é a estrutura básica de um componente:
+
+import React, { Component } from 'react';
+
+class Navbar extends Component{
+    render(){
+        return(
+
+
+
+        );
+    }
+}
+
+export default Navbar;
+
+ADICIONANDO O COMPONENTE NA PÁGINA
+
+- no arquivo App.js, importamos o arquivo do componente:
+
+import Navbar from './components/Navbar/Navbar';
+
+- dentro da div principal, adicionamos o componente em forma de tag HTML.
+
+<div>
+    <Navbar/>
+</div>

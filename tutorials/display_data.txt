@@ -1,0 +1,18 @@
+EXIBIR DADOS DE UM OBJETO NO COMPONENTE
+
+- Digamos que no construtor do componente, tenhamos dados que serão tratados internamente, ou seja,
+  dados que estão no 'this.state = {}'.
+
+- Para exibir esses dados, basta usar a seguinte sintaxe:
+
+<div>
+    <p>{ this.state.atributo.subAtributo }</p>
+</div>
+
+* Funções do Javascript também podem ser usadas dentro desta declaração. Ex:
+
+<div>
+    <p className={ 'badge ml-1 ' + (this.state.atributo.subAtributo > 0 ? 'badge-success : 'badge-danger')}>
+        { this.state.atributo.subAtributo }
+    </p>
+</div>

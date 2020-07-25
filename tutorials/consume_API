@@ -1,0 +1,36 @@
+CONSUMINDO DADOS DE UMA API
+
+- Primeiramente, precisamos entender como funciona o método 'componentDidMount()':
+
+    - Este método é imediatamente invocado após o componente ser carregado na página.
+    - Este é um bom lugar para carregar dados de um enpoint remoto.
+
+- Após o construtor, chamamos o método:
+
+componentDidMount(){
+
+}
+
+- Dentro dele, vamos fazer a requisição dos dados da API. Para isso, usaremos o método 'fetch()' do Javascript:
+
+    - O método 'fetch()' nos possibilita acessar e manipular requisições HTTP.
+    - Dentro do fetch() nós incluímos o link do endpoint que queremos consumir:
+
+componentDidMount(){
+
+    fetch('endpoint.com/dados')
+    .then(result => result.json().then(data => this.setState(data)));
+
+}
+
+- 'result' representa o resultado da requisição;
+- 'result.json()' é um comando que transforma o resultado da requisição em formato JSON;
+- 'data' representa os dados da requisição já formatada para JSON;
+- 'this.setState(data)' é o método que substitui os dados 'default' do 'this.state' pelos dados da requisição (data).
+
+componentDidMount(){
+
+    fetch('endpoint.com/dados')
+    .then(result => result.json().then(data => this.setState(data)));
+
+}

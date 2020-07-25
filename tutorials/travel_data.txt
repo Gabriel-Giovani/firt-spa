@@ -1,0 +1,28 @@
+PERCORRENDO ARRAY DE DADOS EXTERNOS
+
+- Os objetos que vêm de uma requisição API podem conter ou serem arrays.
+- Para percorrer e exibir os dados deste array num documento HTML, podemos usar o método 'map()';
+
+    - O método map() nos permite percorrer um array e obter um novo cujos itens são resultados de uma
+      função de callback.
+
+- Se fossemos exibir os dados de um array que vem de uma requisição, podemos fazer o seguinte:
+
+<ul>
+    {
+        this.state.marcas.map((item, index) => {
+            return(
+                <li key={ index }>
+                    item.name
+                </li>
+            );
+        })
+    }
+</ul>
+
+- 'this.state.marcas.map()' faz o método map() percorrer o array que é o atributo 'marcas';
+- '(item, index)' são parâmetros que representam o item atual do array percorrido e o índice do mesmo
+   no array, respectivamente;
+- 'return()' é o método que retorna o resultado da função;
+- '<li key={ index }>' cada <li> terá uma 'chave', que é o índice (index) do item representado pelo mesmo;
+- 'item.name' é o item atual do array exibido.

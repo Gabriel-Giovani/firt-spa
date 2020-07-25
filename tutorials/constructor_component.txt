@@ -1,0 +1,28 @@
+CONSTRUTOR DO COMPONENTE
+
+- O construtor do componente serve para estabelecer quais dados serão usados pelo componente.
+
+- A estrutura do construtor é a seguinte:
+
+constructor(props){
+    super(props);
+
+    this.state = {
+        ...
+    }
+}
+
+- constructor(props){}
+    - O construtor recebe um argumento OBRIGATÓRIO chamado 'props';
+    - O 'props' representa as propriedades que este componente pode receber externamente.
+
+- super(props)
+    - É uma instrução OBRIGATÓRIA que 'chama' o construtor do componente passando as propriedades (props).
+
+- this.state = {}
+    - Representa o 'estado do componente', ou seja, guarda em um objeto os dados que são tratados internamente 
+      pelo componente.
+    
+    - PROPRIEDADES - dados externos;
+    - ESTADO - dados internos..
+

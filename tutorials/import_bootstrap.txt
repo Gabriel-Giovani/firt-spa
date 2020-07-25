@@ -1,0 +1,23 @@
+IMPORTAÇÃO DO BOOTSTRAP
+
+- npm install jquery popper.js bootstrap;
+- criar pasta 'include' em 'src';
+- criar os arquivos jquery.js, popper.js, bootstrap.js;
+
+IMPORT JQUERY
+import * as $ from 'jquery';
+window.jQuery = window.$ = $;
+
+IMPORT POPPER
+import Popper from 'popper.js';
+window.Popper = Popper;
+
+IMPORT BOOTSTRAP
+import './jquery';
+import './popper';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+- importar o bootstrap no arquivo index.js
+
+import './include/bootstrap';
